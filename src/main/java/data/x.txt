@@ -1,0 +1,48 @@
+Category -> "id", "name", "ver"
+    DataItem -> "id", "rule"
+        DataItemName
+        DataItemDefinition
+        DataItemFormat -> "desc"
+            Compound
+                Variable
+                Repetitive
+                    Fixed -> "length"
+                        Bits -> "from-to", "bit", "fx", "encode"
+                            BitsShortName
+                            BitsName
+                            BitsValue -> "val"
+                            BitsConst
+                            BitsUnit -> "scale", "min", "max"
+                            BitsPresence
+        DataItemNote
+    UAP
+        UAPItem -> "bit", "frn", "len"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

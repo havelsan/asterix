@@ -328,7 +328,7 @@
 						<BitsValue val="0">Default value</BitsValue>
 						<BitsValue val="1">Inconsistent Emergency Code</BitsValue>
 					</Bits>
-					<Bits from="2">
+					<Bits from="2"> <!--***************************-->
 						<BitsName>Spare bits set to 0</BitsName>
 						<BitsConst>0</BitsConst>
 					</Bits>
