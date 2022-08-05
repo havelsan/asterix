@@ -3,18 +3,20 @@ package data;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
-@XStreamAlias("UAPItem")
-public class UAPItem {
+@XStreamAlias("BitsUnit")
+public class BitsUnit {
 
     @XStreamAsAttribute
-    @XStreamAlias("bit")
-    private String bit;
+    @XStreamAlias("scale")
+    private String scale;
 
-    @XStreamAlias("frn")
+    @XStreamAlias("min")
     @XStreamAsAttribute
-    private String frn;
+    private String min;
 
+    @XStreamAlias("max")
     @XStreamAsAttribute
-    @XStreamAlias("len")
-    private String len;
+    private String max;
+
+
 }
