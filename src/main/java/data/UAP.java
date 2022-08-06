@@ -10,4 +10,13 @@ public class UAP {
 
     @XStreamImplicit(itemFieldName = "UAPItem")
     private List<UAPItem> uapItems;
+
+    public String getItems() {
+        String string = "UAP: ";
+        for (UAPItem uapItem: uapItems){
+            string += uapItem.getItem() + "\n\t\t";
+        }
+
+        return string;
+    }
 }

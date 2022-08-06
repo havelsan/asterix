@@ -10,4 +10,12 @@ public class Variable {
 
     @XStreamImplicit(itemFieldName = "Fixed")
     private List<Fixed> fixedList;
+
+    public String getItem() {
+        String string = "Variable: ";
+        for (Fixed fixed: fixedList){
+            string += fixed.getItem() + " ";
+        }
+        return string;
+    }
 }

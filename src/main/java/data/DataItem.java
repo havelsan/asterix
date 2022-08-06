@@ -26,4 +26,20 @@ public class DataItem {
 
     @XStreamAlias("DataItemNote")
     private String dataItemNote;
+
+    public String getItems() {
+        String string = "DataItem: ";
+//        try {
+//            string += "id: " + id + " rule: " + rule + " dataItemName: " + dataItemName + " dataItemDefinition: " +
+//                    dataItemDefinition + " dataItemNote: " + dataItemNote + "\n\t" + dataItemFormat.getItem();
+//
+//        }catch (Exception e){
+//
+//        }
+        string += "id: " + id + " rule: " + rule + "\ndataItemName: " + dataItemName + "\ndataItemDefinition: " +
+                dataItemDefinition + "\ndataItemNote: " + dataItemNote + "\n" + dataItemFormat.getItem();
+
+
+        return string;
+    }
 }

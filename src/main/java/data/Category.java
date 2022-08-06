@@ -30,4 +30,16 @@ public class Category {
     public int getItemListLen(){
         return dataItems.size();
     }
+
+    public String getItems(){
+        String string = "Category: ";
+        string += "id: " + id + " name: " + name + " ver: " + ver + "\n\t";
+        for (DataItem dataItem: dataItems){
+            string += dataItem.getItems() + "\n\n";
+        }
+        string += uap.getItems();
+
+        return string;
+    }
+
 }

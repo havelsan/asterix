@@ -34,6 +34,6 @@ public class Main {
 
         Category object = (Category) xStream.fromXML(new File("C:\\Users\\Ahmet Bera\\Desktop\\havelsan\\asterix\\resources\\asterix_cat062_1_18.xml"));
 
-        System.out.println(object.getItemListLen());
+        System.out.println(object.getItems());
     }
 }

@@ -15,4 +15,9 @@ public class Fixed {
 
     @XStreamImplicit(itemFieldName = "Bits")
     private List<Bits> bits;
+
+    public String getItem() {
+        String string = "Fixed: length: " + length ;
+        return "[" + string + "]";
+    }
 }

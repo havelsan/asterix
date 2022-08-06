@@ -17,4 +17,8 @@ public class UAPItem {
     @XStreamAsAttribute
     @XStreamAlias("len")
     private String len;
+
+    public String getItem() {
+        return "UAPItem: bit: " + bit + " frn: " + frn + " len: " + len;
+    }
 }

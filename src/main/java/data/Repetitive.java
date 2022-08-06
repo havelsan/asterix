@@ -7,4 +7,9 @@ public class Repetitive {
 
     @XStreamAlias("Fixed")
     private Fixed fixed;
+
+    public String getItem() {
+        String string = "Repetitive: fixed: " + fixed.getItem();
+        return string;
+    }
 }

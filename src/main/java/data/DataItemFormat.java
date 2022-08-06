@@ -21,4 +21,34 @@ public class DataItemFormat {
 
     @XStreamImplicit(itemFieldName = "Fixed")
     private List<Fixed> fixedList;
+
+    public String getItem(){
+        StringBuilder string = new StringBuilder("DataItemFormat: ");
+        String compoundGetItem;
+        String variableGetItem;
+        try{
+            compoundGetItem = compound.getItem();
+        }catch (Exception e){
+            e.printStackTrace();
+            compoundGetItem = null;
+        }
+        try{
+            variableGetItem = variable.getItem();
+        }catch (Exception e){
+            e.printStackTrace();
+            variableGetItem = null;
+        }
+        string.append("\nCompound: ").append(compoundGetItem).append("\nvariable: ").append(variableGetItem).append("\n");
+        try{
+            for (Fixed fixed: fixedList){
+                string.append(fixed.getItem());
+            }
+        }catch (Exception e){
+            string.append("fixed: null");
+        }
+
+
+
+        return string.toString();
+    }
 }
