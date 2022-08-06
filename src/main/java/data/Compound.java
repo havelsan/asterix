@@ -11,8 +11,8 @@ public class Compound {
     @XStreamAlias("Variable")
     private Variable variable;
 
-    @XStreamAlias("Repetitive")
-    private Repetitive repetetive;
+    @XStreamImplicit(itemFieldName = "Repetitive")
+    private List<Repetitive> repetitiveList;
 
     @XStreamImplicit(itemFieldName = "Fixed")
     private List<Fixed> fixedList;

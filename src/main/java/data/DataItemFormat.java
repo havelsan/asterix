@@ -2,6 +2,9 @@ package data;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
+
+import java.util.List;
 
 @XStreamAlias("DataItemFormat")
 public class DataItemFormat {
@@ -16,4 +19,6 @@ public class DataItemFormat {
     @XStreamAlias("Variable")
     private Variable variable;
 
+    @XStreamImplicit(itemFieldName = "Fixed")
+    private List<Fixed> fixedList;
 }

@@ -2,6 +2,7 @@ package data;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
+import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 @XStreamAlias("DataItem")
 public class DataItem {

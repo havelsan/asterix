@@ -2,6 +2,7 @@ package data;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
 
 import java.util.List;
 
@@ -20,6 +21,13 @@ public class Category {
     @XStreamAlias("ver")
     private String ver;
 
-    @XStreamAlias("DataItem")
+    @XStreamImplicit(itemFieldName = "DataItem")
     private List<DataItem> dataItems;
+
+    @XStreamAlias("UAP")
+    private UAP uap;
+
+    public int getItemListLen(){
+        return dataItems.size();
+    }
 }
