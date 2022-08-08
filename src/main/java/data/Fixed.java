@@ -17,7 +17,10 @@ public class Fixed {
     private List<Bits> bits;
 
     public String getItem() {
-        String string = "Fixed: length: " + length ;
+        String string = "Fixed: length:" + length + " ";
+        for (Bits bits1: bits){
+            string += bits1.getItem();
+        }
         return "[" + string + "]";
     }
 }

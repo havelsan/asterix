@@ -33,7 +33,7 @@ public class Category {
 
     public String getItems(){
         String string = "Category: ";
-        string += "id: " + id + " name: " + name + " ver: " + ver + "\n\t";
+        string += "id: " + id + " name: " + name + " ver: " + ver + "\n\n";
         for (DataItem dataItem: dataItems){
             string += dataItem.getItems() + "\n\n";
         }

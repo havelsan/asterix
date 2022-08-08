@@ -23,19 +23,17 @@ public class DataItemFormat {
     private List<Fixed> fixedList;
 
     public String getItem(){
-        StringBuilder string = new StringBuilder("DataItemFormat: ");
+        StringBuilder string = new StringBuilder("DataItemFormat: " + desc);
         String compoundGetItem;
         String variableGetItem;
         try{
             compoundGetItem = compound.getItem();
         }catch (Exception e){
-            e.printStackTrace();
             compoundGetItem = null;
         }
         try{
             variableGetItem = variable.getItem();
         }catch (Exception e){
-            e.printStackTrace();
             variableGetItem = null;
         }
         string.append("\nCompound: ").append(compoundGetItem).append("\nvariable: ").append(variableGetItem).append("\n");

@@ -30,14 +30,14 @@ public class Compound {
                 string += repetitive.getItem() + "\n";
             }
         }catch (Exception e){
-            e.printStackTrace();
+            string += "repetitive: null";
         }
         try{
             for (Fixed fixed: fixedList){
                 string += fixed.getItem();
             }
         }catch (Exception e){
-            e.printStackTrace();
+            string += "fixed: null";
         }
 
 

@@ -47,4 +47,25 @@ public class Bits {
     @XStreamImplicit(itemFieldName = "BitsUnit")
     private List<BitsUnit> bitsUnits;
 
+    public String getItem() {
+        StringBuilder string = new StringBuilder("from: " + from + " to: " + to + " bit: " + bit + " fx: " + fx + " encode:" + encode +
+                " BitsShortName:" + BitsShortName + " BitsName:" + BitsName + " BitsConst:" + BitsConst +
+                " BitsPresence: " + BitsPresence + " ");
+        try{
+            for (BitsValue bitsValue: bitsValues){
+                string.append(bitsValue.getItem());
+            }
+        }catch (Exception e){
+            string.append(" bitsValue: null");
+        }
+        try{
+            for (BitsUnit bitsUnit: bitsUnits){
+                string.append(bitsUnit.getItem());
+            }
+        }catch (Exception e){
+            string.append(" bitsUnit: null");
+        }
+
+        return string.toString();
+    }
 }
