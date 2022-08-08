@@ -31,8 +31,8 @@ public class Main {
         xStream.addPermission(AnyTypePermission.ANY);
         xStream.processAnnotations(Category.class);
 
-        String atHome = "C:\\Users\\Ahmet Bera\\Desktop\\havelsan\\asterix\\resources\\asterix_cat062_1_18.xml";
-        String atWork = "C:\\Users\\stj.abkansu\\Desktop\\havelsan\\asterix\\resources\\asterix_cat062_1_18.xml";
+        String atHome = "resources\\asterix_cat062_1_18.xml";
+        String atWork = "resources\\asterix_cat062_1_18.xml";
         Category object = null;
         try{
             object = (Category) xStream.fromXML(new File(atHome));
