@@ -44,9 +44,6 @@ public class DataItemFormat {
         }catch (Exception e){
             string.append("fixed: null");
         }
-
-
-
         return string.toString();
     }
 }

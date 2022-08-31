@@ -34,12 +34,19 @@ public class Category {
     public String getItems(){
         String string = "Category: ";
         string += "id: " + id + " name: " + name + " ver: " + ver + "\n\n";
-        for (DataItem dataItem: dataItems){
-            string += dataItem.getItems() + "\n\n";
-        }
+//        for (DataItem dataItem: dataItems){
+//            string += dataItem.getItems() + "\n\n";
+//        }
         string += uap.getItems();
 
         return string;
     }
 
+    public UAP getUap(){
+        return this.uap;
+    }
+
+    public List<DataItem> getDataItems() {
+        return dataItems;
+    }
 }
