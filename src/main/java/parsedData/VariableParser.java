@@ -12,7 +12,6 @@ public class VariableParser {
 
     public int[] variableParse(Variable variable, int number){
 
-
         int fixedLength = Integer.parseInt(variable.getFixedList().get(pointer).getLength());
         List<Fixed> fixedList = variable.getFixedList();
 
@@ -32,8 +31,6 @@ public class VariableParser {
             returnValue[0] = 0;
             returnValue[1] = 0;
         }
-
-
 
         return returnValue;
     }
