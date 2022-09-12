@@ -23,4 +23,17 @@ public class Fixed {
         }
         return "[" + string + "]";
     }
+
+    public List<Bits> getBits() {
+        return bits;
+    }
+
+    public String getLength() {
+        return length;
+    }
+
+    public Fixed(String length, List<Bits> bits) {
+        this.length = length;
+        this.bits = bits;
+    }
 }

@@ -11,19 +11,19 @@ public class Bits {
 
     @XStreamAsAttribute
     @XStreamAlias("from")
-    private String from;
+    private int from;
 
     @XStreamAlias("to")
     @XStreamAsAttribute
-    private String to;
+    private int to;
 
     @XStreamAlias("bit")
     @XStreamAsAttribute
-    private String bit;
+    private int bit;
 
     @XStreamAlias("fx")
     @XStreamAsAttribute
-    private String fx;
+    private int fx;
 
     @XStreamAlias("encode")
     @XStreamAsAttribute
@@ -47,6 +47,8 @@ public class Bits {
     @XStreamImplicit(itemFieldName = "BitsUnit")
     private List<BitsUnit> bitsUnits;
 
+    private int value;
+
     public String getItem() {
         StringBuilder string = new StringBuilder("from: " + from + " to: " + to + " bit: " + bit + " fx: " + fx + " encode:" + encode +
                 " BitsShortName:" + BitsShortName + " BitsName:" + BitsName + " BitsConst:" + BitsConst +
@@ -68,4 +70,64 @@ public class Bits {
 
         return string.toString();
     }
+
+    public int getFrom() {
+        return from;
+    }
+
+    public int getTo() {
+        return to;
+    }
+
+    public int getBit() {
+        return bit;
+    }
+
+    public int getFx() {
+        return fx;
+    }
+
+    public String getEncode() {
+        return encode;
+    }
+
+    public String getBitsShortName() {
+        return BitsShortName;
+    }
+
+    public String getBitsName() {
+        return BitsName;
+    }
+
+    public String getBitsConst() {
+        return BitsConst;
+    }
+
+    public String getBitsPresence() {
+        return BitsPresence;
+    }
+
+    public List<BitsValue> getBitsValues() {
+        return bitsValues;
+    }
+
+    public List<BitsUnit> getBitsUnits() {
+        return bitsUnits;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
+
+    public Bits(int from, int to, Integer bit, int fx) {
+        this.from = from;
+        this.to = to;
+        this.bit = bit;
+        this.fx = fx;
+    }
+
 }

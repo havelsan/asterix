@@ -18,4 +18,12 @@ public class Variable {
         }
         return string;
     }
+
+    public Variable(List<Fixed> fixedList) {
+        this.fixedList = fixedList;
+    }
+
+    public List<Fixed> getFixedList() {
+        return fixedList;
+    }
 }
